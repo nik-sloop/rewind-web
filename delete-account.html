@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Delete your account — Rewind</title>
+    <meta
+      name="description"
+      content="How to delete your Rewind account and everything in it, what gets removed, and what to do about an active subscription first."
+    />
+    <link rel="canonical" href="https://nik-sloop.github.io/rewind-web/delete-account.html" />
+    <link rel="icon" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="wordmark" href="./">
+          <img src="icon.png" alt="" width="28" height="28" />
+          Rewind
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="prose">
+        <h1>Delete your account</h1>
+        <p class="lede">
+          This removes your account and everything in it. It cannot be undone.
+        </p>
+
+        <div class="todo">
+          <p>
+            <strong>Read this first, repo owner:</strong> Apple's Guideline 5.1.1(v) requires
+            account deletion to be available <em>inside the app</em>. This page does not
+            satisfy that on its own — it is a supplement. Once the in-app flow exists, make
+            step 1 below the in-app route and demote the email route to a fallback.
+          </p>
+        </div>
+
+        <div class="callout callout--warning">
+          <h2 style="margin-top: 0; font-size: 1.125rem">Cancel your subscription first</h2>
+          <p style="margin-bottom: 0">
+            Apple bills your subscription, not us, so deleting your Rewind account does
+            <strong>not</strong> stop the charges. Cancel it before you delete, in
+            <strong>Settings &rsaquo; [your name] &rsaquo; Subscriptions &rsaquo;
+            Rewind</strong>. If you delete the account first you will have to cancel from
+            Apple's settings anyway, and you will have lost the app that explains how.
+          </p>
+        </div>
+
+        <section>
+          <h2>How to delete it</h2>
+          <p>
+            Email <a href="mailto:support@example.com?subject=Delete%20my%20Rewind%20account">support@example.com</a>
+            from the email address on your account, with the subject
+            <strong>Delete my Rewind account</strong>.
+          </p>
+          <p>
+            We will confirm the request is yours, delete the account, and email you to confirm
+            it is done. We do this within 30 days and usually within a few working days. We
+            will not ask you for any identifying information beyond what is needed to be sure
+            the request came from the account holder — and we will never ask for your password.
+          </p>
+          <p class="small muted">
+            If you signed in with Apple, Google or a phone number and no longer have access to
+            that method, email us anyway and say so, and we will find another way to verify
+            you.
+          </p>
+        </section>
+
+        <section>
+          <h2>What gets deleted</h2>
+          <ul>
+            <li>Your profile: email, phone number, username, display name and picture.</li>
+            <li>Every trip you own, and all the photos and videos in them.</li>
+            <li>
+              Every photo and video you uploaded to <em>other people's</em> trips, including
+              the copies in our storage.
+            </li>
+            <li>Every activity you imported from Apple Health or Strava, including its route.</li>
+            <li>Your Strava connection and the access token we held for it.</li>
+            <li>Your friendships and any pending friend requests.</li>
+            <li>Your notification tokens and preferences.</li>
+            <li>Any video edits you had rendered.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What does not get deleted</h2>
+          <ul>
+            <li>
+              <strong>Your camera roll.</strong> Rewind never modifies or deletes your original
+              photos, and deleting your account does not touch them. Everything stays on your
+              phone.
+            </li>
+            <li>
+              <strong>Other people's trips and their own media.</strong> If you were a
+              collaborator, the trip belongs to whoever created it and continues to exist
+              without you. Your uploads to it are removed; theirs are not.
+            </li>
+            <li>
+              <strong>Records of purchases.</strong> We must keep transaction records for tax
+              purposes, typically for six or seven years. These are records that a payment
+              happened — not your trips, photos or health data.
+            </li>
+            <li>
+              <strong>Your Apple subscription.</strong> Only you can cancel that, with Apple.
+              See the box above.
+            </li>
+            <li>
+              <strong>Encrypted backups, briefly.</strong> Deleted data can persist in our
+              providers' encrypted backups for up to 30 days after removal from live systems,
+              after which those backups expire on their own.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>If you want less than deletion</h2>
+          <p>You may not need to delete everything. You can also:</p>
+          <ul>
+            <li>Delete a single trip, or single photos, in the app.</li>
+            <li>Leave a trip someone else added you to, from its member list.</li>
+            <li>Disconnect Strava from your profile, which leaves your trips intact.</li>
+            <li>
+              Revoke photo, location or Health access in iOS Settings at any time. Rewind keeps
+              working with less.
+            </li>
+            <li>Turn off individual notification categories in your profile.</li>
+          </ul>
+          <p>
+            Or ask us for an export of your data first — email the same address and we will
+            send it before anything is removed.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>&copy; 2026 Rewind.</p>
+        <nav aria-label="Footer">
+          <a href="./">Home</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="delete-account.html">Delete your account</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

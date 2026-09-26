@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Support — Rewind</title>
+    <meta
+      name="description"
+      content="Get help with Rewind: contact us, troubleshoot trip detection, permissions, imports, subscriptions and account deletion."
+    />
+    <link rel="canonical" href="https://nik-sloop.github.io/rewind-web/support.html" />
+    <link rel="icon" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="wordmark" href="./">
+          <img src="icon.png" alt="" width="28" height="28" />
+          Rewind
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <a href="support.html" aria-current="page">Support</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="prose">
+        <h1>Support</h1>
+        <p class="lede">
+          Rewind is made by one person, and that person answers the email. There is no ticket
+          queue and no bot.
+        </p>
+
+        <div class="contact-card">
+          <p class="muted small" style="margin-bottom: 0.5rem">Email us</p>
+          <p class="contact-card__email">
+            <a href="mailto:support@example.com">support@example.com</a>
+          </p>
+          <p class="muted small">
+            Usually a reply within two working days. It helps a lot if you say which iPhone
+            and iOS version you are on, and what you expected to happen.
+          </p>
+        </div>
+
+        <div class="todo">
+          <p>
+            <strong>Before publishing:</strong> replace
+            <code>support@example.com</code> everywhere on this site with a mailbox you
+            actually read. App Store reviewers do email it, and a bounce is a rejection.
+          </p>
+        </div>
+
+        <section id="faq">
+          <h2>Common questions</h2>
+
+          <h3>Trips and photos</h3>
+
+          <details>
+            <summary>Rewind hasn't found any trips</summary>
+            <p>
+              Trip detection needs two things from your photos: <strong>when</strong> they were
+              taken and <strong>where</strong>. Almost every photo has the date, but location is
+              only there if location services were on for the camera when you took it.
+            </p>
+            <p>Check, in order:</p>
+            <ol>
+              <li>
+                <strong>Settings &rsaquo; Privacy &amp; Security &rsaquo; Photos &rsaquo;
+                Rewind</strong> is set to <strong>Full Access</strong>. Limited access lets
+                Rewind see only the handful of photos you picked, which is rarely enough to
+                make a trip.
+              </li>
+              <li>
+                <strong>Settings &rsaquo; Privacy &amp; Security &rsaquo; Location Services
+                &rsaquo; Camera</strong> is on, for photos taken from now on.
+              </li>
+              <li>
+                Your library actually contains photos taken away from home. Rewind works out
+                roughly where you usually are and treats that as not-a-trip, so a library of
+                only local photos produces no trips.
+              </li>
+            </ol>
+            <p>
+              Photos that came from WhatsApp, screenshots, and most downloads have had their
+              location stripped before they reached you. Rewind cannot place those.
+            </p>
+          </details>
+
+          <details>
+            <summary>Why does Rewind want my whole photo library?</summary>
+            <p>
+              Because it builds your trips <em>from</em> your library rather than asking you to
+              build them. It reads the dates and locations already stored alongside your photos
+              to work out which days were a trip, and it does that reading on your phone.
+            </p>
+            <p>
+              Nothing is uploaded unless you add it to a trip. The scan's results stay on the
+              device. See the <a href="privacy.html#device">privacy policy</a> for exactly
+              what does and does not leave your phone.
+            </p>
+          </details>
+
+          <details>
+            <summary>A trip is wrong — wrong dates, or two trips merged into one</summary>
+            <p>
+              Detection is a guess from timestamps and coordinates, and it gets things wrong
+              when a trip has a long gap in the middle or when two trips are close together.
+              Open the trip and edit its dates and name; you can also remove media that should
+              not be in it.
+            </p>
+          </details>
+
+          <details>
+            <summary>An upload is stuck</summary>
+            <p>
+              Uploads resume by themselves, so the usual fix is to leave Rewind open on a good
+              connection for a minute. Large videos upload in resumable chunks and will pick up
+              where they stopped rather than starting again.
+            </p>
+            <p>
+              If it has not moved after that, check you are not over your storage limit — the
+              plans screen shows what you have used. Uploads are refused while you are over.
+            </p>
+          </details>
+
+          <h3>Activities: Apple Health, Strava</h3>
+
+          <details>
+            <summary>My workouts aren't showing up</summary>
+            <p>
+              Rewind offers you workouts that overlap the dates of a trip, so the trip's dates
+              have to actually cover the day you did the activity. Check those first.
+            </p>
+            <p>
+              For <strong>Apple Health</strong>: iOS does not tell an app which health
+              permissions you denied, so a denied permission looks identical to having no
+              workouts. Check
+              <strong>Settings &rsaquo; Health &rsaquo; Data Access &amp; Devices &rsaquo;
+              Rewind</strong> and confirm <em>Workouts</em> and <em>Workout Routes</em> are
+              both on. Routes are a separate toggle from workouts, and without it you get a
+              workout with no line on the map.
+            </p>
+            <p>
+              For <strong>Strava</strong>: reconnect it from your profile. Strava access tokens
+              expire, and a revoked authorisation cannot be detected until we try to use it.
+            </p>
+          </details>
+
+          <details>
+            <summary>Does Rewind read my heart rate or other health data?</summary>
+            <p>
+              No. From Apple Health it reads workouts and their GPS routes, and nothing else —
+              no heart rate, cadence, steps, weight or sleep. It never writes anything to Apple
+              Health. It only looks at the dates of a trip you choose, and you pick which
+              workouts come in.
+            </p>
+            <p>
+              Health data is never used for advertising or marketing and is never sold. See
+              <a href="privacy.html#health">the health section of the privacy policy</a>.
+            </p>
+          </details>
+
+          <h3>Edits and sharing</h3>
+
+          <details>
+            <summary>My edit failed, or is stuck rendering</summary>
+            <p>
+              Edits are rendered on our servers and usually take a few minutes. If one fails,
+              you are not charged for it — the monthly allowance or the credit it used comes
+              back automatically, so you can simply ask again.
+            </p>
+            <p>
+              If the same trip fails repeatedly, email us with the trip name. That is a bug on
+              our side and we would like to see it.
+            </p>
+          </details>
+
+          <details>
+            <summary>Sharing to Instagram isn't working</summary>
+            <p>
+              Direct sharing needs the Instagram app installed and signed in. If it is not
+              there, save the video to your camera roll and post it from Instagram instead.
+            </p>
+          </details>
+
+          <h3>Plans and payments</h3>
+
+          <details>
+            <summary>The plans screen is empty, or has no prices</summary>
+            <p>
+              That is our end, not yours — it means the app could not reach the store to read
+              current prices. Check your connection and reopen the screen. If it stays empty,
+              email us; there is nothing you can do to fix it from your side.
+            </p>
+          </details>
+
+          <details>
+            <summary>I paid but I'm still on the free plan</summary>
+            <p>
+              Tap <strong>Restore purchases</strong> on the plans screen. A purchase is
+              confirmed by Apple and then verified on our server, and occasionally the second
+              step arrives late; restoring re-checks it.
+            </p>
+            <p>
+              If it still has not applied after a few minutes, email us the Apple receipt and
+              we will apply it by hand.
+            </p>
+          </details>
+
+          <details>
+            <summary>How do I cancel my subscription?</summary>
+            <p>
+              Subscriptions are billed by Apple, so you cancel with Apple:
+              <strong>Settings &rsaquo; [your name] &rsaquo; Subscriptions &rsaquo;
+              Rewind</strong>, then Cancel.
+            </p>
+            <p>
+              Cancelling stops the next charge and you keep the plan until the period you have
+              paid for ends. Deleting the app does not cancel anything.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I get a refund?</summary>
+            <p>
+              Refunds are handled by Apple, not by us — request one at
+              <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. If
+              something is broken, tell us as well: we can grant edits or plan time directly to
+              make up for it, which is often faster.
+            </p>
+          </details>
+
+          <h3>Account</h3>
+
+          <details>
+            <summary>How do I delete my account?</summary>
+            <p>
+              See <a href="delete-account.html">deleting your account</a>. Cancel any active
+              subscription with Apple <em>first</em> — deleting your account does not stop
+              Apple billing you.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I get a copy of my data?</summary>
+            <p>
+              Yes. Email <a href="mailto:support@example.com">support@example.com</a> from the
+              address on your account and we will send you an export within 30 days.
+            </p>
+          </details>
+        </section>
+
+        <section id="reporting">
+          <h2>Reporting a problem with content or a person</h2>
+          <p>
+            Trips are private and shared only with people invited to them. If someone has added
+            you to a trip and put something abusive in it, leave the trip from its member list,
+            and email us at
+            <a href="mailto:support@example.com">support@example.com</a> with the trip name.
+          </p>
+          <p>
+            We act on reports of illegal content immediately and report it to the authorities
+            where we must.
+          </p>
+        </section>
+
+        <section id="security-contact">
+          <h2>Found a security problem?</h2>
+          <p>
+            Please tell us before you tell anyone else, at
+            <a href="mailto:support@example.com">support@example.com</a>. We will confirm we
+            received it, keep you updated, and credit you if you would like that. We will not
+            take legal action over a good-faith report that did not access or destroy other
+            people's data.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>&copy; 2026 Rewind.</p>
+        <nav aria-label="Footer">
+          <a href="./">Home</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="delete-account.html">Delete your account</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

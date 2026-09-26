@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rewind — Your trips, drawn where they happened</title>
+    <meta
+      name="description"
+      content="Rewind finds the trips already in your camera roll, draws them on a map, and cuts them into something watchable. Photos stay on your phone until you add them to a trip."
+    />
+    <link rel="canonical" href="https://nik-sloop.github.io/rewind-web/" />
+    <link rel="icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rewind — Your trips, drawn where they happened" />
+    <meta
+      property="og:description"
+      content="Every trip you have been on, on one map. Open one and watch the day play back across it."
+    />
+    <meta property="og:image" content="https://nik-sloop.github.io/rewind-web/icon.png" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="wordmark" href="./">
+          <img src="icon.png" alt="" width="28" height="28" />
+          Rewind
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <img class="hero__icon" src="icon.png" alt="The Rewind app icon" width="88" height="88" />
+        <p class="eyebrow">For iPhone</p>
+        <h1>Your trips, drawn where they happened</h1>
+        <p class="lede">
+          Every trip you have been on, on one map. Open one and watch the day play back
+          across it.
+        </p>
+        <div class="cta-row">
+          <!--
+            This link 404s until the app is actually released. 6799163619 is the App
+            Store Connect app id from eas.json, and apps.apple.com resolves an
+            /app/id<n> path only once a version has gone live.
+          -->
+          <a class="btn btn--primary" href="https://apps.apple.com/app/id6799163619">
+            Download on the App Store
+          </a>
+          <a class="btn btn--ghost" href="support.html">Get support</a>
+        </div>
+      </section>
+
+      <section aria-label="Features">
+        <div class="features">
+          <article class="card">
+            <h3>It finds the trips itself</h3>
+            <p>
+              You do not create trips. Rewind reads the dates and places your camera roll
+              already records, works out which days were a trip, and names them.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Your photos stay on your phone</h3>
+            <p>
+              The scan happens on your device. Nothing is uploaded unless you put it in a
+              trip — and then only the things you put there.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Turn a trip into something watchable</h3>
+            <p>
+              Ask for an edit and Rewind cuts the trip's photos and clips together, set to
+              music, ready to share.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Everyone's footage, one trip</h3>
+            <p>
+              Add the people who were there and their footage joins yours, without anyone
+              airdropping anything.
+            </p>
+          </article>
+          <article class="card">
+            <h3>And what you recorded while you were there</h3>
+            <p>
+              Connect Strava or Apple Health and Rewind will offer the rides, runs and hikes
+              you tracked during a trip, drawn along the route with your photos.
+            </p>
+          </article>
+          <article class="card">
+            <h3>A passport that fills itself in</h3>
+            <p>
+              The places you have been, collected as you go, from the trips Rewind already
+              found.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="prose" aria-labelledby="privacy-heading">
+        <h2 id="privacy-heading">What Rewind does with your photos</h2>
+        <p>
+          Rewind needs your camera roll, and that is the part the rest is built on. It reads
+          the dates and locations already stored alongside your photos to work out where you
+          went and when. <strong>It reads them on your phone.</strong> Nothing leaves the
+          device unless you add it to a trip.
+        </p>
+        <p>
+          When you do add something to a trip, it is uploaded to private storage that only
+          you and the people you invited to that trip can read. There is no advertising in
+          Rewind, no analytics SDK, and no crash reporter — nothing is sold or shared with
+          data brokers, because nothing is collected to sell.
+        </p>
+        <p>
+          The <a href="privacy.html">privacy policy</a> sets out every piece of data that
+          leaves your phone, where it goes, and how to get rid of it.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>
+          &copy; 2026 Rewind.
+          <!-- TODO: replace with your trading name once it is settled. -->
+        </p>
+        <nav aria-label="Footer">
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="delete-account.html">Delete your account</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
