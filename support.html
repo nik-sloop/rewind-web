@@ -8,7 +8,7 @@
       name="description"
       content="Get help with Rewind: contact us, troubleshoot trip detection, permissions, imports, subscriptions and account deletion."
     />
-    <link rel="canonical" href="https://nik-sloop.github.io/rewind-web/support.html" />
+    <link rel="canonical" href="https://getrewind.cloud/support.html" />
     <link rel="icon" href="favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -57,8 +57,10 @@
         <div class="todo">
           <p>
             <strong>Before publishing:</strong> replace
-            <code>support@example.com</code> everywhere on this site with a mailbox you
-            actually read. App Store reviewers do email it, and a bounce is a rejection.
+            <code>support@example.com</code> everywhere on this site — and
+            <code>SUPPORT_EMAIL</code> in the app's <code>src/content/legal.ts</code> — with a
+            mailbox you actually read. App Store reviewers do email it, and a bounce is a
+            rejection.
           </p>
         </div>
 
@@ -175,15 +177,27 @@
           <h3>Edits and sharing</h3>
 
           <details>
-            <summary>My edit failed, or is stuck rendering</summary>
+            <summary>My film failed, or is stuck rendering</summary>
             <p>
-              Edits are rendered on our servers and usually take a few minutes. If one fails,
-              you are not charged for it — the monthly allowance or the credit it used comes
-              back automatically, so you can simply ask again.
+              A film is either cut on your phone, which takes under a minute and shows its
+              progress, or rendered on our servers, which usually takes a few minutes. If a
+              server render fails, you are not charged for it — the monthly allowance or the
+              credit it used comes back automatically, so you can simply ask again.
             </p>
             <p>
               If the same trip fails repeatedly, email us with the trip name. That is a bug on
               our side and we would like to see it.
+            </p>
+          </details>
+
+          <details>
+            <summary>The film is on the edit's page but not in my camera roll</summary>
+            <p>
+              Saving a film puts it on the edit's own page. <strong>Export</strong> is what
+              writes it to your Photos, and it needs permission to add to your library — iOS
+              asks the first time. If the export said it could not save, the message names
+              the reason; <strong>Settings &rsaquo; Privacy &amp; Security &rsaquo; Photos
+              &rsaquo; Rewind</strong> is where to allow it.
             </p>
           </details>
 
@@ -247,9 +261,10 @@
           <details>
             <summary>How do I delete my account?</summary>
             <p>
-              See <a href="delete-account.html">deleting your account</a>. Cancel any active
-              subscription with Apple <em>first</em> — deleting your account does not stop
-              Apple billing you.
+              In the app: open the Profile tab, scroll to the bottom, and tap
+              <strong>Delete account</strong>. See <a href="delete-account.html">deleting
+              your account</a> for what goes with it. Cancel any active subscription with
+              Apple <em>first</em> — deleting your account does not stop Apple billing you.
             </p>
           </details>
 
@@ -265,12 +280,16 @@
         <section id="reporting">
           <h2>Reporting a problem with content or a person</h2>
           <p>
-            Trips are private and shared only with people invited to them. If someone has added
-            you to a trip and put something abusive in it, leave the trip from its member list,
-            and email us at
-            <a href="mailto:support@example.com">support@example.com</a> with the trip name.
+            Every profile, trip and photo in Rewind can be reported from the app: the dots in
+            the corner of a profile, <em>Report this trip</em> at the foot of a trip, and the
+            flag on a photo. Pick a reason and a person reads it. Any person can be blocked
+            from their profile; blocking hides the two of you from each other and ends any
+            friendship or follow between you, and you can unblock from your own profile.
           </p>
           <p>
+            If someone has added you to a trip and put something abusive in it, leave the
+            trip from its member list and report it. If the app has no button for what you
+            need to tell us, email <a href="mailto:support@example.com">support@example.com</a>.
             We act on reports of illegal content immediately and report it to the authorities
             where we must.
           </p>

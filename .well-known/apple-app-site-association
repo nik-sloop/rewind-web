@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["999N755HF2.com.periq.app"],
+        "components": [
+          { "/": "/trip/*", "comment": "A shared trip: /trip/<id>?t=<token>" },
+          { "/": "/world/*", "comment": "Somebody's world: /world/<id>" }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["999N755HF2.com.periq.app"]
+  }
+}

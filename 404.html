@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Not found — Rewind</title>
+    <meta name="description" content="Open this link in Rewind." />
+    <link rel="canonical" href="https://getrewind.cloud/404.html" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="wordmark" href="/">
+          <img src="/icon.png" alt="" width="28" height="28" />
+          Rewind
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <a href="/support.html">Support</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="prose">
+        <h1 id="title">Page not found</h1>
+        <p id="lede" class="lede">There is nothing at this address.</p>
+        <p id="cta"><a class="btn btn--primary" id="open" href="/">Go to the home page</a></p>
+        <p id="store" class="small muted" hidden>Don't have it yet? <a href="https://apps.apple.com/app/id6799163619">Get Rewind on the App Store</a>.</p>
+      </div>
+      <script>
+        // /trip/<id>?t=<token> becomes periq://trip/<id>?t=<token>, and
+        // /world/<id> becomes periq://world/<id>: the path and the query,
+        // carried into the app unchanged.
+        (function () {
+          var match = location.pathname.match(/\/(trip|world)\/([^/]+)\/?$/);
+          if (!match) return;
+          var kind = match[1];
+          var target = 'periq://' + kind + '/' + match[2] + location.search;
+          document.getElementById('title').textContent =
+            kind === 'trip' ? 'A trip shared with you' : 'A world shared with you';
+          document.getElementById('lede').textContent = 'This link opens in the Rewind app.';
+          var open = document.getElementById('open');
+          open.textContent = 'Open in Rewind';
+          open.href = target;
+          document.getElementById('store').hidden = false;
+          // One automatic try; if the app is not there the page simply stays.
+          setTimeout(function () { location.href = target; }, 150);
+        })();
+      </script>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>&copy; 2026 Rewind.</p>
+        <nav aria-label="Footer">
+          <a href="/">Home</a>
+          <a href="/support.html">Support</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/delete-account.html">Delete your account</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
